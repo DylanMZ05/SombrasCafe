@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="img-1" src="images/logo.png" alt="logo">
+        <img class="img-2" src="images/logo-nombre.jpeg" alt="logo-nombre">
+    </header>
+
+    <section class="first-section">
+    </section>
+
+    <section class="first-section">
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header');
+            const firstSection = document.querySelector('.first-section');
+    
+            window.addEventListener('scroll', function() {
+                const firstSectionBottom = firstSection.getBoundingClientRect().bottom;
+    
+                if (firstSectionBottom <= 0) {
+                    header.classList.add('show');
+                } else {
+                    header.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
